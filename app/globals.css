@@ -32,6 +32,25 @@ body {
   font-family: var(--font-lato-var), "Helvetica Neue", Arial, sans-serif;
 }
 
+input:focus {
+  outline: none !important;
+  border-color: rgba(251, 248, 245, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(251, 248, 245, 0.15) !important;
+}
+
+.btn-login {
+  background: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s ease;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+input::placeholder {
+  color: rgba(251, 248, 245, 0.35);
+}
+
 :root {
   --header-font-size: 1.25rem;
   --record-name-size: 0.85rem;

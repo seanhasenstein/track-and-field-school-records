@@ -67,33 +67,36 @@ export default function LoginPage() {
   };
 
   const cardStyle: React.CSSProperties = {
-    background: "#fbf8f5",
+    background: "rgba(255, 255, 255, 0.1)",
+    backdropFilter: "blur(16px)",
+    WebkitBackdropFilter: "blur(16px)",
     padding: "32px",
-    borderRadius: "6px",
+    borderRadius: "12px",
     maxWidth: "400px",
     width: "100%",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+    border: "1px solid rgba(255, 255, 255, 0.15)",
   };
 
   const inputStyle: React.CSSProperties = {
     width: "100%",
-    border: "1px solid #B99865",
+    border: "1px solid rgba(251,248,245,0.25)",
     padding: "10px 12px",
-    borderRadius: "4px",
-    color: "#0A2C23",
+    borderRadius: "6px",
+    color: "#fbf8f5",
     fontSize: "1rem",
     fontFamily: "var(--font-lato-var), sans-serif",
     boxSizing: "border-box",
+    background: "rgba(255,255,255,0.1)",
   };
 
   const buttonStyle: React.CSSProperties = {
     width: "100%",
-    background: "#B99865",
     color: "#0A2C23",
     padding: "12px",
-    borderRadius: "4px",
-    fontFamily: "var(--font-cinzel-var), serif",
-    fontWeight: 700,
+    borderRadius: "6px",
+    fontFamily: "var(--font-lato-var), sans-serif",
+    fontWeight: 800,
     fontSize: "0.95rem",
     border: "none",
     cursor: loading ? "default" : "pointer",
@@ -106,21 +109,21 @@ export default function LoginPage() {
         <Image
           src="/shield-with-background.svg"
           alt="Sheboygan Lutheran shield"
-          width={36}
-          height={46}
-          style={{ margin: "0 auto 12px", display: "block", width: "36px", height: "auto" }}
+          width={28}
+          height={36}
+          style={{ margin: "0 auto 12px", display: "block", width: "28px", height: "auto" }}
         />
-        <h1 style={{ fontFamily: "var(--font-cinzel-var), serif", color: "#0A2C23", fontSize: "1.3rem", fontWeight: 700, textAlign: "center", marginBottom: "8px" }}>
+        <h1 style={{ fontFamily: "var(--font-cinzel-var), serif", color: "#BE945D", fontSize: "1.3rem", fontWeight: 700, textAlign: "center", marginBottom: "8px" }}>
           Admin Login
         </h1>
-        <p style={{ color: "#666", fontSize: "0.85rem", textAlign: "center", marginBottom: "24px", maxWidth: "280px", margin: "0 auto 24px", fontFamily: "var(--font-lato-var), sans-serif" }}>
+        <p style={{ color: "rgba(251,248,245,0.6)", fontSize: "0.85rem", textAlign: "center", marginBottom: "24px", maxWidth: "280px", margin: "0 auto 24px", fontFamily: "var(--font-lato-var), sans-serif" }}>
           {step === "email"
             ? "Enter your email to receive a verification code"
             : `We sent a code to ${email}`}
         </p>
 
         {error && (
-          <div style={{ background: "#fde8e8", color: "#991b1b", padding: "8px 12px", borderRadius: "4px", fontSize: "0.85rem", marginBottom: "16px", textAlign: "center", fontFamily: "var(--font-lato-var), sans-serif" }}>
+          <div style={{ background: "rgba(253,232,232,0.9)", color: "#991b1b", padding: "8px 12px", borderRadius: "4px", fontSize: "0.85rem", marginBottom: "16px", textAlign: "center", fontFamily: "var(--font-lato-var), sans-serif" }}>
             {error}
           </div>
         )}
@@ -135,7 +138,7 @@ export default function LoginPage() {
               required
               style={{ ...inputStyle, marginBottom: "16px" }}
             />
-            <button type="submit" disabled={loading} style={buttonStyle}>
+            <button type="submit" disabled={loading} className="btn-login" style={buttonStyle}>
               {loading ? "Sending..." : "Send Code"}
             </button>
           </form>
@@ -152,7 +155,7 @@ export default function LoginPage() {
               autoComplete="one-time-code"
               style={{ ...inputStyle, marginBottom: "16px", textAlign: "center", fontSize: "1.5rem", letterSpacing: "0.3em" }}
             />
-            <button type="submit" disabled={loading || code.length !== 6} style={{ ...buttonStyle, opacity: loading || code.length !== 6 ? 0.6 : 1 }}>
+            <button type="submit" disabled={loading || code.length !== 6} className="btn-login" style={{ ...buttonStyle, opacity: loading || code.length !== 6 ? 0.6 : 1 }}>
               {loading ? "Verifying..." : "Verify"}
             </button>
             <button
