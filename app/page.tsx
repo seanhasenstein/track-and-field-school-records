@@ -4,15 +4,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div style={{ background: "#0A2C23", minHeight: "100vh", padding: "40px 16px" }}>
+    <div className="board-page" style={{ background: "#0A2C23", minHeight: "100vh", padding: "40px 16px" }}>
       {/* Title — gold text on green, no background */}
       <header style={{ textAlign: "center", marginBottom: "24px" }}>
         <Image
           src="/shield-with-background.svg"
           alt="Sheboygan Lutheran shield"
-          width={32}
-          height={41}
-          style={{ margin: "0 auto 10px", width: "32px", height: "auto" }}
+          width={42}
+          height={54}
+          style={{ margin: "0 auto 10px", width: "clamp(36px, 5vw, 42px)", height: "auto" }}
           priority
         />
         <h1

@@ -60,13 +60,13 @@ input::placeholder {
 }
 
 @media (max-width: 960px) {
-  html {
+  .board-page {
     zoom: 0.75;
   }
 }
 
 @media (max-width: 720px) {
-  html {
+  .board-page {
     zoom: 0.55;
   }
   :root {
@@ -79,7 +79,7 @@ input::placeholder {
 }
 
 @media (max-width: 500px) {
-  html {
+  .board-page {
     zoom: 0.4;
   }
   :root {
