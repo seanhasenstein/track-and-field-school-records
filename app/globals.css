@@ -69,8 +69,8 @@ input::placeholder {
     zoom: 0.75;
   }
   .board-shield {
-    width: 56px !important;
-    margin-bottom: 20px !important;
+    width: 64px !important;
+    margin-bottom: 22px !important;
   }
 }
 
