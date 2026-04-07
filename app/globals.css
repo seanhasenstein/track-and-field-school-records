@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0A2C23;
+  --color-foreground: #faf5e4;
+  --font-cinzel: var(--font-cinzel-var);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-cinzel-var), "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0A2C23;
+  color: #33260a;
+  font-family: var(--font-cinzel-var), "Times New Roman", serif;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel-var), "Times New Roman", serif;
+}
+
+@media (max-width: 960px) {
+  html {
+    zoom: 0.75;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    zoom: 0.55;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    zoom: 0.4;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
