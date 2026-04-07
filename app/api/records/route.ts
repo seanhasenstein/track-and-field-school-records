@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { revalidatePath } from "next/cache";
 import { getDb } from "@/lib/mongodb";
 import { records as localRecords } from "@/lib/records-data";
 
@@ -52,6 +53,8 @@ export async function POST(request: NextRequest) {
   if (result.matchedCount === 0) {
     return Response.json({ error: "Record not found" }, { status: 404 });
   }
+
+  revalidatePath("/");
 
   return Response.json({ success: true });
 }
