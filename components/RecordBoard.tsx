@@ -10,7 +10,7 @@ const rowGap = "12px";
 const headerText: React.CSSProperties = {
   fontFamily: "var(--font-cinzel-var), 'Times New Roman', serif",
   color: "#000000",
-  fontSize: "1.25rem",
+  fontSize: "var(--header-font-size, 1.25rem)",
   fontWeight: 900,
   textTransform: "uppercase",
   letterSpacing: "0.05em",

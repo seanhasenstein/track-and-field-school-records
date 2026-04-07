@@ -50,7 +50,7 @@ export default function EventLabel({ label, relay }: Props) {
       )}
       <span
         style={{
-          fontSize: "0.8rem",
+          fontSize: "var(--event-label-size, 0.8rem)",
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: "0.03em",
@@ -63,7 +63,7 @@ export default function EventLabel({ label, relay }: Props) {
       {hasRelay && (
         <span
           style={{
-            fontSize: "0.8rem",
+            fontSize: "var(--event-label-size, 0.8rem)",
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.03em",

@@ -39,7 +39,7 @@ export default function RecordPlaque({ entry, relay }: Props) {
             <div
               key={i}
               style={{
-                fontSize: "0.8rem",
+                fontSize: "var(--relay-name-size, 0.8rem)",
                 fontWeight: 700,
                 lineHeight: "1.35",
                 textTransform: "uppercase",
@@ -51,8 +51,8 @@ export default function RecordPlaque({ entry, relay }: Props) {
           ))}
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: "3px", padding: "0 20%" }}>
-          <span style={{ fontSize: "0.8rem", fontWeight: 600 }}>{entry.year}</span>
-          <span style={{ fontSize: "0.8rem", fontWeight: 600 }}>{entry.mark}</span>
+          <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.year}</span>
+          <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.mark}</span>
         </div>
       </div>
     );
@@ -66,7 +66,7 @@ export default function RecordPlaque({ entry, relay }: Props) {
 
       <div
         style={{
-          fontSize: "0.85rem",
+          fontSize: "var(--record-name-size, 0.85rem)",
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: "0.01em",
@@ -75,8 +75,8 @@ export default function RecordPlaque({ entry, relay }: Props) {
         {entry.names[0]}
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1px", padding: "0 20%" }}>
-        <span style={{ fontSize: "0.8rem", fontWeight: 600 }}>{entry.year}</span>
-        <span style={{ fontSize: "0.8rem", fontWeight: 600 }}>{entry.mark}</span>
+        <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.year}</span>
+        <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.mark}</span>
       </div>
     </div>
   );
