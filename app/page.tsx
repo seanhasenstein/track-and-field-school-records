@@ -10,9 +10,10 @@ export default function Home() {
         <Image
           src="/shield-with-background.svg"
           alt="Sheboygan Lutheran shield"
-          width={42}
-          height={54}
-          style={{ margin: "0 auto 10px", width: "clamp(36px, 5vw, 42px)", height: "auto" }}
+          width={48}
+          height={61}
+          className="board-shield"
+          style={{ margin: "0 auto", height: "auto", display: "block" }}
           priority
         />
         <h1

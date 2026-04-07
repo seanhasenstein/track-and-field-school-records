@@ -59,9 +59,18 @@ input::placeholder {
   --relay-name-size: 0.8rem;
 }
 
+.board-shield {
+  width: 28px !important;
+  margin-bottom: 10px !important;
+}
+
 @media (max-width: 960px) {
   .board-page {
     zoom: 0.75;
+  }
+  .board-shield {
+    width: 48px !important;
+    margin-bottom: 18px !important;
   }
 }
 
