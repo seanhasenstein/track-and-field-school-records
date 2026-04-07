@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RecordBoard from "@/components/RecordBoard";
 import Link from "next/link";
 
@@ -6,6 +7,14 @@ export default function Home() {
     <div style={{ background: "#0A2C23", minHeight: "100vh", padding: "40px 16px" }}>
       {/* Title — gold text on green, no background */}
       <header style={{ textAlign: "center", marginBottom: "24px" }}>
+        <Image
+          src="/shield-with-background.svg"
+          alt="Sheboygan Lutheran shield"
+          width={32}
+          height={41}
+          style={{ margin: "0 auto 10px", width: "32px", height: "auto" }}
+          priority
+        />
         <h1
           style={{
             fontFamily: "var(--font-cinzel-var), 'Times New Roman', serif",

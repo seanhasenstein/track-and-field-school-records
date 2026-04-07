@@ -28,6 +28,10 @@ body {
   font-family: var(--font-cinzel-var), "Times New Roman", serif;
 }
 
+.font-lato {
+  font-family: var(--font-lato-var), "Helvetica Neue", Arial, sans-serif;
+}
+
 :root {
   --header-font-size: 1.25rem;
   --record-name-size: 0.85rem;

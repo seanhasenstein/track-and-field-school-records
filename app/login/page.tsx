@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 
 type Step = "email" | "otp";
@@ -81,6 +82,7 @@ export default function LoginPage() {
     borderRadius: "4px",
     color: "#0A2C23",
     fontSize: "1rem",
+    fontFamily: "var(--font-lato-var), sans-serif",
     boxSizing: "border-box",
   };
 
@@ -101,17 +103,24 @@ export default function LoginPage() {
   return (
     <div style={{ background: "#0A2C23", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "16px" }}>
       <div style={cardStyle}>
-        <h1 style={{ fontFamily: "var(--font-cinzel-var), serif", color: "#0A2C23", fontSize: "1.3rem", textAlign: "center", marginBottom: "8px" }}>
+        <Image
+          src="/shield-with-background.svg"
+          alt="Sheboygan Lutheran shield"
+          width={36}
+          height={46}
+          style={{ margin: "0 auto 12px", display: "block", width: "36px", height: "auto" }}
+        />
+        <h1 style={{ fontFamily: "var(--font-cinzel-var), serif", color: "#0A2C23", fontSize: "1.3rem", fontWeight: 700, textAlign: "center", marginBottom: "8px" }}>
           Admin Login
         </h1>
-        <p style={{ color: "#666", fontSize: "0.85rem", textAlign: "center", marginBottom: "24px" }}>
+        <p style={{ color: "#666", fontSize: "0.85rem", textAlign: "center", marginBottom: "24px", maxWidth: "280px", margin: "0 auto 24px", fontFamily: "var(--font-lato-var), sans-serif" }}>
           {step === "email"
             ? "Enter your email to receive a verification code"
             : `We sent a code to ${email}`}
         </p>
 
         {error && (
-          <div style={{ background: "#fde8e8", color: "#991b1b", padding: "8px 12px", borderRadius: "4px", fontSize: "0.85rem", marginBottom: "16px", textAlign: "center" }}>
+          <div style={{ background: "#fde8e8", color: "#991b1b", padding: "8px 12px", borderRadius: "4px", fontSize: "0.85rem", marginBottom: "16px", textAlign: "center", fontFamily: "var(--font-lato-var), sans-serif" }}>
             {error}
           </div>
         )}

@@ -117,6 +117,7 @@ export default function UsersPage() {
     padding: "8px 10px",
     borderRadius: "4px",
     fontSize: "0.9rem",
+    fontFamily: "var(--font-lato-var), sans-serif",
     border: "1px solid #B99865",
     boxSizing: "border-box",
   };
@@ -206,7 +207,7 @@ export default function UsersPage() {
               }}
             >
               <div>
-                <div style={{ color: "#fbf8f5", fontSize: "0.9rem" }}>{u.email}</div>
+                <div style={{ color: "#fbf8f5", fontSize: "0.9rem", fontFamily: "var(--font-lato-var), sans-serif" }}>{u.email}</div>
                 <div style={{ color: "rgba(251,248,245,0.4)", fontSize: "0.75rem" }}>
                   {u.roles.join(", ")}
                   {u.lastLoginAt && ` \u00B7 Last login: ${new Date(u.lastLoginAt).toLocaleDateString()}`}

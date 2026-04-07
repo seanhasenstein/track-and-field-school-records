@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 import { EventRecord } from "@/lib/types";
@@ -146,6 +147,7 @@ export default function AdminPage() {
     padding: "8px 10px",
     borderRadius: "4px",
     fontSize: "0.9rem",
+    fontFamily: "var(--font-lato-var), sans-serif",
     border: "1px solid #B99865",
     boxSizing: "border-box",
   };
@@ -170,7 +172,7 @@ export default function AdminPage() {
                 Manage Users
               </Link>
             )}
-            <span style={{ color: "rgba(251,248,245,0.5)", fontSize: "0.8rem" }}>{user.email}</span>
+            <span style={{ color: "rgba(251,248,245,0.5)", fontSize: "0.8rem", fontFamily: "var(--font-lato-var), sans-serif" }}>{user.email}</span>
             <button
               onClick={async () => { await logout(); router.push("/"); }}
               style={{ background: "transparent", color: "#BE945D", border: "1px solid rgba(185,152,101,0.3)", padding: "4px 12px", borderRadius: "4px", fontSize: "0.8rem", cursor: "pointer", fontFamily: "var(--font-cinzel-var), serif" }}
@@ -180,6 +182,13 @@ export default function AdminPage() {
           </div>
         </div>
 
+        <Image
+          src="/shield-with-background.svg"
+          alt="Sheboygan Lutheran shield"
+          width={28}
+          height={36}
+          style={{ margin: "0 auto 8px", display: "block", width: "28px", height: "auto" }}
+        />
         <h1 style={{ fontFamily: "var(--font-cinzel-var), serif", color: "#BE945D", fontSize: "1.5rem", textAlign: "center", fontWeight: 900, margin: "0 0 24px" }}>
           Edit Records
         </h1>
