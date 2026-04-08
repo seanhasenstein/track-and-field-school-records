@@ -3,9 +3,9 @@ import { records as localRecords } from "@/lib/records-data";
 import RecordPlaque from "./RecordPlaque";
 import EventLabel from "./EventLabel";
 
-const gridCols = "1fr 140px 1fr";
-const gridGap = "20px";
-const rowGap = "12px";
+const gridCols = "var(--grid-cols, 1fr 140px 1fr)";
+const gridGap = "var(--grid-gap, 20px)";
+const rowGap = "var(--row-gap, 12px)";
 
 const headerText: React.CSSProperties = {
   fontFamily: "var(--font-cinzel-var), 'Times New Roman', serif",
@@ -48,7 +48,7 @@ export default async function RecordBoard() {
   const records = await getRecords();
 
   return (
-    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 16px" }}>
+    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 4px" }}>
       {/* Column headers */}
       <div style={{ display: "grid", gridTemplateColumns: gridCols, gap: gridGap, marginBottom: "8px" }}>
         <div style={headerText}>Girls Records</div>

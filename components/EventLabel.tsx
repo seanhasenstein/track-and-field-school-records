@@ -19,8 +19,8 @@ const goldPlate: React.CSSProperties = {
 };
 
 const dot: React.CSSProperties = {
-  width: "5px",
-  height: "5px",
+  width: "var(--dot-size, 5px)",
+  height: "var(--dot-size, 5px)",
   borderRadius: "50%",
   background: "radial-gradient(circle at 35% 35%, #d4c4a0, #7a6840)",
   border: "0.5px solid #8a7a50",
@@ -56,6 +56,8 @@ export default function EventLabel({ label, relay }: Props) {
           letterSpacing: "0.03em",
           lineHeight: 1.2,
           textAlign: "center",
+          display: "inline-block",
+          padding: "var(--event-label-padding, 0)",
         }}
       >
         {mainLabel}

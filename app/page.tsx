@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="board-page" style={{ background: "#0A2C23", minHeight: "100vh", padding: "40px 16px" }}>
+    <div className="board-page" style={{ background: "#0A2C23", minHeight: "100vh", padding: "24px 8px" }}>
       {/* Title — gold text on green, no background */}
       <header style={{ textAlign: "center", marginBottom: "24px" }}>
         <Image
@@ -55,7 +55,7 @@ export default function Home() {
       <footer className="no-print" style={{ textAlign: "center", marginTop: "32px" }}>
         <Link
           href="/admin"
-          style={{ color: "rgba(160,140,60,0.18)", fontSize: "0.6rem", fontFamily: "var(--font-cinzel-var), serif" }}
+          style={{ color: "rgba(160,140,60,0.18)", fontSize: "var(--admin-link-size, 0.6rem)", fontFamily: "var(--font-cinzel-var), serif" }}
         >
           Admin
         </Link>

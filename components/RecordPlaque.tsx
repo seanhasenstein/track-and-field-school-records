@@ -16,8 +16,8 @@ const nameplate: React.CSSProperties = {
 };
 
 const dot: React.CSSProperties = {
-  width: "5px",
-  height: "5px",
+  width: "var(--dot-size, 5px)",
+  height: "var(--dot-size, 5px)",
   borderRadius: "50%",
   background: "radial-gradient(circle at 35% 35%, #c0c0c0, #666)",
   border: "0.5px solid #999",
@@ -27,7 +27,7 @@ const dot: React.CSSProperties = {
 export default function RecordPlaque({ entry, relay }: Props) {
   if (relay) {
     return (
-      <div style={{ ...nameplate, padding: "5px 12px" }}>
+      <div style={{ ...nameplate, padding: "var(--relay-plaque-padding, 5px 12px)" }}>
         {/* Corner dots */}
         <span style={{ ...dot, top: "4px", left: "4px" }} />
         <span style={{ ...dot, top: "4px", right: "4px" }} />
@@ -50,7 +50,7 @@ export default function RecordPlaque({ entry, relay }: Props) {
             </div>
           ))}
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: "3px", padding: "0 20%" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: "3px", padding: "var(--detail-padding, 0 20%)" }}>
           <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.year}</span>
           <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.mark}</span>
         </div>
@@ -59,7 +59,7 @@ export default function RecordPlaque({ entry, relay }: Props) {
   }
 
   return (
-    <div style={{ ...nameplate, padding: "4px 12px", textAlign: "center" }}>
+    <div style={{ ...nameplate, padding: "var(--plaque-padding, 4px 12px)", textAlign: "center" }}>
       {/* Side dots */}
       <span style={{ ...dot, top: "50%", left: "4px", transform: "translateY(-50%)" }} />
       <span style={{ ...dot, top: "50%", right: "4px", transform: "translateY(-50%)" }} />
@@ -74,7 +74,7 @@ export default function RecordPlaque({ entry, relay }: Props) {
       >
         {entry.names[0]}
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1px", padding: "0 20%" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1px", padding: "var(--detail-padding, 0 20%)" }}>
         <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.year}</span>
         <span style={{ fontSize: "var(--record-detail-size, 0.8rem)", fontWeight: 600 }}>{entry.mark}</span>
       </div>

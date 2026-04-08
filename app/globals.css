@@ -57,6 +57,13 @@ input::placeholder {
   --record-detail-size: 0.8rem;
   --event-label-size: 0.8rem;
   --relay-name-size: 0.8rem;
+  --grid-cols: 1fr 140px 1fr;
+  --grid-gap: 20px;
+  --row-gap: 12px;
+  --plaque-padding: 4px 12px;
+  --relay-plaque-padding: 5px 12px;
+  --detail-padding: 0 20%;
+  --dot-size: 5px;
 }
 
 .board-shield {
@@ -65,9 +72,6 @@ input::placeholder {
 }
 
 @media (max-width: 960px) {
-  .board-page {
-    zoom: 0.75;
-  }
   .board-shield {
     width: 60px !important;
     margin-bottom: 22px !important;
@@ -75,28 +79,53 @@ input::placeholder {
 }
 
 @media (max-width: 720px) {
-  .board-page {
-    zoom: 0.55;
-  }
   :root {
-    --header-font-size: 1rem;
-    --record-name-size: 0.7rem;
-    --record-detail-size: 0.65rem;
-    --event-label-size: 0.65rem;
-    --relay-name-size: 0.65rem;
+    --header-font-size: 1.1rem;
+    --record-name-size: 0.85rem;
+    --record-detail-size: 0.8rem;
+    --event-label-size: 0.8rem;
+    --relay-name-size: 0.8rem;
+    --grid-cols: 1fr 90px 1fr;
+    --grid-gap: 8px;
+    --row-gap: 8px;
+    --plaque-padding: 4px 8px;
+    --relay-plaque-padding: 5px 8px;
+    --detail-padding: 0 8%;
   }
 }
 
 @media (max-width: 500px) {
-  .board-page {
-    zoom: 0.4;
-  }
   :root {
-    --header-font-size: 0.85rem;
-    --record-name-size: 0.6rem;
-    --record-detail-size: 0.55rem;
-    --event-label-size: 0.55rem;
-    --relay-name-size: 0.55rem;
+    --header-font-size: 0.8rem;
+    --record-name-size: 0.52rem;
+    --record-detail-size: 0.56rem;
+    --event-label-size: 0.58rem;
+    --relay-name-size: 0.52rem;
+    --grid-cols: 1fr 90px 1fr;
+    --grid-gap: 10px;
+    --row-gap: 6px;
+    --plaque-padding: 4px 6px;
+    --relay-plaque-padding: 4px 6px;
+    --detail-padding: 0 12%;
+    --dot-size: 3.5px;
+    --admin-link-size: 0.8rem;
+    --event-label-padding: 0 2px;
+  }
+  .board-shield {
+    width: 28px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --grid-cols: 1fr 56px 1fr;
+    --record-name-size: 0.48rem;
+    --record-detail-size: 0.56rem;
+    --event-label-size: 0.44rem;
+    --header-font-size: 0.72rem;
+    --relay-name-size: 0.48rem;
+    --event-label-padding: 0 4px;
   }
 }
 
